@@ -4,4 +4,36 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>chapter2.LoginServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DemoServlet</servlet-name>
+        <servlet-class>chapter2.DemoServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Demo2Servlet</servlet-name>
+        <servlet-class>chapter2.Demo2Servlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Demo3Servlet</servlet-name>
+        <servlet-class>chapter2.Demo3Servlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DemoServlet</servlet-name>
+        <url-pattern>/demo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Demo2Servlet</servlet-name>
+        <url-pattern>/demo2</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Demo3Servlet</servlet-name>
+        <url-pattern>/demo3</url-pattern>
+    </servlet-mapping>
 </web-app>
