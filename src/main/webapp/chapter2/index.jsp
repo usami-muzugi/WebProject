@@ -12,7 +12,7 @@
 </head>
 <body>
     <center>
-        <form action="http://localhost/login" method="post">
+        <form action="http://localhost/chapter2/login" method="post">
             <p>用户名:<input type="text" name="username">
             <p>密&nbsp;码:<input type="password" name="password"></p>
             <P>

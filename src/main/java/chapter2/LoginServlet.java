@@ -14,9 +14,18 @@ public class LoginServlet extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         System.out.println("username:"+username+"\npassword:"+password);
+        //如果用户名为ourinsama,密码为usamimizugi，则跳转到success.jsp页面 否则为fail.jsp
+        /*转发是不会重定向的，所以就还是原来的页面*/
+        if (username.equals("ourinsama") && password.equals("usamimizugi")) {
+            request.getRequestDispatcher("success.jsp").forward(request,response);
+        } else {
+            //request.getRequestDispatcher("fail.jsp").forward(request,response);
+            //这里使用的是跳转，跳转会请求两次跳转到另一个页面
+            response.sendRedirect("fail.jsp");
+        }
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doGet(request,response);
+        /*doGet(request,response);*/
     }
 }
