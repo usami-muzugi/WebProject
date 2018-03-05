@@ -1,5 +1,6 @@
 package chapter2.login;
 
+import chapter2.login.utils.UploadUtils;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
@@ -10,9 +11,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.BufferedInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.util.*;
 
 /**
@@ -41,6 +40,7 @@ public class RegistServlet extends HttpServlet {
             String name;
             String value;
             String hobbyvalue = "";
+            String filePath = null;
             for (FileItem fileItem : list
                     ) {
                 name = fileItem.getFieldName();
@@ -64,7 +64,22 @@ public class RegistServlet extends HttpServlet {
                     InputStream inputStream = fileItem.getInputStream();
                     BufferedInputStream bufferedInputStream = new BufferedInputStream(inputStream);
                     //获取文件上传路径
-                    String filepath = this.getServletContext().getRealPath("/upload/img");
+                    filePath = this.getServletContext().getRealPath("/chapter2/login/upload/img");
+//                    System.out.println(filePath);
+                    String newFileName = filePath + "\\" + UploadUtils.getUUIDFileName(string);
+                    OutputStream outputStream = new FileOutputStream(new File(newFileName));
+                    BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(outputStream);
+                    int len = 0;
+                    byte[] bytes = new byte[1024];
+                    while ((len = bufferedInputStream.read(bytes)) == -1) {
+                        bufferedOutputStream.write(bytes, 0, len);
+                    }
+                    bufferedOutputStream.flush();
+                    bufferedOutputStream.close();
+                    outputStream.flush();
+                    outputStream.close();
+                    bufferedInputStream.close();
+                    inputStream.close();
                 }
             }
             System.out.println(map);
@@ -75,10 +90,13 @@ public class RegistServlet extends HttpServlet {
             user.setPassword(map.get("password"));
             user.setHobby(map.get("hobby"));
             user.setSex(map.get("sex"));
+            user.setPath(filePath);
             //将这个注册用户的信息存入到List集合当中
             List<User> userList = (List<User>) this.getServletContext().getAttribute("list");
             userList.add(user);
             this.getServletContext().setAttribute("list", userList);
+            req.getSession().setAttribute("username", user.getUsername());
+            resp.sendRedirect("/chapter2/login/login.jsp");
         } catch (FileUploadException e) {
             e.printStackTrace();
         }
