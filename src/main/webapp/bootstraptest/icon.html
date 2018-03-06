@@ -2,9 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Icon</title>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <script src="/bootstrap/js/jquery-3.3.1.min.js"></script>
+    <!--    导致这个报错的原因是bootstrap加载的顺序有问题，必须先引用jquery.min.js文件，然后再引用botstrap的js。-->
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
-$END$
+<button class="btn btn-default"><span class="glyphicon glyphicon-star"></span>这是一个按钮</button>
+
 </body>
 </html>

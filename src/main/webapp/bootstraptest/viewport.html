@@ -2,9 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <meta name="viewport" content="width=device-width,inital-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <title>Title</title>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <script src="/bootstrap/js/jquery-3.3.1.min.js"></script>
+    <!--    导致这个报错的原因是bootstrap加载的顺序有问题，必须先引用jquery.min.js文件，然后再引用botstrap的js。-->
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <!--<style>-->
+        <!--.test {-->
+            <!--width: 300px;-->
+            <!--height: 200px;-->
+            <!--background: #66CCFF;-->
+        <!--}-->
+        <!--@media screen and (max-width: 900px){-->
+            <!--.test {-->
+                <!--width: 300px;-->
+                <!--height: 200px;-->
+                <!--background: #0f0f0f;-->
+            <!--}-->
+            <!---->
+        <!--}-->
+    <!--</style>-->
+    <style>
+        .test {
+            height: 300px;
+            background: #66CCFF;
+        }
+    </style>
 </head>
 <body>
-$END$
+<!--<div class="test"></div>-->
+<div class="test col-lg-3 col-md-4 col-sm-6 col-xs-12"></div>  <!--栅格的用户 lg大屏 md平板 sm手机 xs小小手机 X/12-->
 </body>
 </html>

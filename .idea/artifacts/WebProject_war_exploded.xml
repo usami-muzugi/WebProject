@@ -6,6 +6,10 @@
         <element id="directory" name="classes">
           <element id="module-output" name="WebProject" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: commons-fileupload:commons-fileupload:1.3.3" />
+          <element id="library" level="project" name="Maven: commons-io:commons-io:2.6" />
+        </element>
       </element>
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/target/WebProject/META-INF/MANIFEST.MF" />

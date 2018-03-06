@@ -4,10 +4,81 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
-    <script src="/bootstrap/js/bootstrap.js"></script>
     <script src="/bootstrap/js/jquery-3.3.1.min.js"></script>
+    <!--    导致这个报错的原因是bootstrap加载的顺序有问题，必须先引用jquery.min.js文件，然后再引用botstrap的js。-->
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
+<table class="table table-hover table-bordered table-striped">
+    <tr>
+        <th>th是用来定义一个表头的</th>
+        <th>再定义一个</th>
+        <th>再定义一个</th>
+        <th>再定义一个</th>
+    </tr>
+    <tr>
+        <td>td是用来定义一个表格单元的</td>
+        <td>再定义一个哟</td>
+        <td>再定义一个哟</td>
+        <td>再定义一个哟</td>
+    </tr>          <tr>
+    <td>td是用来定义一个表格单元的</td>
+    <td>再定义一个哟</td>
+    <td>再定义一个哟</td>
+    <td>再定义一个哟</td>
+</tr>
+    <tr>
+        <td>td是用来定义一个表格单元的</td>
+        <td>再定义一个哟</td>
+        <td>再定义一个哟</td>
+        <td>再定义一个哟</td>
+    </tr>          <tr>
+    <td>td是用来定义一个表格单元的</td>
+    <td>再定义一个哟</td>
+    <td>再定义一个哟</td>
+    <td>再定义一个哟</td>
+</tr>
+    <tr class="active">
+        <td>td是用来定义一个表格单元的</td>
+        <td>再定义一个哟</td>
+        <td>再定义一个哟</td>
+        <td>再定义一个哟</td>
+    </tr>
+    <tr class="info">
+        <td>td是用来定义一个表格单元的</td>
+        <td>info</td>
+        <td>再定义一个哟</td>
+        <td>再定义一个哟</td>
+    </tr>
+    <tr class="success">
+        <td>td是用来定义一个表格单元的</td>
+        <td>success</td>
+        <td>再定义一个哟</td>
+        <td>再定义一个哟</td>
+    </tr>
+    <tr class="warning">
+        <td>td是用来定义一个表格单元的</td>
+        <td>warning</td>
+        <td>再定义一个哟</td>
+        <td>再定义一个哟</td>
+    </tr>
+    <tr class="danger">
+        <td>td是用来定义一个表格单元的</td>
+        <td>danger</td>
+        <td>再定义一个哟</td>
+        <td>再定义一个哟</td>
+    </tr>
+</table>
+<br>
+<hr/>
+<input class="btn btn-danger" value="danger">
+<input class="btn btn-default " value="default">
+<input class="btn btn-group-lg " value="lg">
+
+
+<br>
+<hr/>
+
 <button class="btn btn-default">这是一个按钮</button>
 <button class="btn btn-success">success</button>
 <button class="btn btn-info">info</button>
@@ -15,8 +86,9 @@
 <button class="btn btn-danger">这是一个按钮</button>
 <button class="btn btn-group-sm active">这是一个按下的按钮</button>
 <button class="btn btn-group-sm btn-block">全屏的按钮</button>
-
+<button class="btn btn-warning" disabled="disabled">disable</button>
 
 <a class="btn btn-success">这是a标签所写的按钮的效果</a>
+<img class="img img-thumbnail img-circle img-" src="https://img3.mukewang.com/55608578000172f501000100-140-140.jpg">
 </body>
 </html>

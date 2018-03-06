@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dropdown</title>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <script src="/bootstrap/js/jquery-3.3.1.min.js"></script>
+<!--    导致这个报错的原因是bootstrap加载的顺序有问题，必须先引用jquery.min.js文件，然后再引用botstrap的js。-->
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">   <!--添加绑定事件才能使按钮可下拉-->
+            这是一个按钮
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li>
+                <a href="http://www.ximcloud.cn">ourinsama</a>
+            </li>
+            <li>
+                <a href="http://www.ximcloud.cn">jestom</a>
+            </li>
+            <li>
+                <a href="http://www.ximcloud.cn">usamimizugi</a>
+            </li>
+        </ul>
+    </div>
+    <div class="input-group">   <!--实现空间组-->
+        <span class="input-group-addon">$</span>
+        <input type="text" class="form-control">
+    </div>
+
+    <!--导航-->
+    <ul class="nav nav-tabs">
+        <li><a>ourinsama</a></li>
+        <li><a>wizard</a></li>
+        <li><a>usamimizugi</a></li>
+        <li><a>time</a></li>
+        <li><a>jestom</a></li>
+        <li><a>a</a></li>
+    </ul>
+    <ul class="nav nav-pills">
+        <li><a>ourinsama</a></li>
+        <li><a>wizard</a></li>
+        <li><a>usamimizugi</a></li>
+        <li><a>time</a></li>
+        <li><a>jestom</a></li>
+        <li><a>a</a></li>
+    </ul>
+    <ul class="nav nav-pills nav-stacked">
+        <li><a>ourinsama</a></li>
+        <li><a>wizard</a></li>
+        <li><a>usamimizugi</a></li>
+        <li><a>time</a></li>
+        <li><a>jestom</a></li>
+        <li><a>a</a></li>
+    </ul>
+
+    <nav>   <!--<nav>	定义导航链接。-->
+        <ul class="pager">  <!--<ul>	定义无序列表。-->
+            <li class="previous">    <!--<li>	定义列表的项目。-->
+                <a href="####">向左</a>
+            </li>
+            <li>
+                <a href="####">中间</a>
+            </li>
+            <li class="next">
+                <a href="####">向右</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="progress">
+        <div class="progress-bar progress-bar-danger progress-bar-striped" style="width: 60%">60%</div>
+    </div>
+
+
+    <hr/>
+
+    <ul class="list-group">
+        <li class="list-group-item active">
+            这是一个列表哦</a>
+            <span class="badge">
+                15
+            </span>
+        </li>
+        <li class="list-group-item disabled" >
+            这是一个列表哦
+            <span class="badge">
+                15
+            </span>
+        </li>
+        <li class="list-group-item list-group-item-info">
+            这是一个列表哦
+            <span class="badge">
+                15
+            </span>
+        </li>
+    </ul>
+
+
+    <hr/>
+    <br/>
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            弹出层！
+        </div>
+        <div class="panel-body">
+            面板的具体内容
+        </div>
+        <div class="panel-footer">
+            面板的注脚
+        </div>
+    </div>
+    <div class="panel panel-danger">
+        <div class="panel-heading">
+            弹出层！
+        </div>
+        <div class="panel-body">
+            面板的具体内容
+        </div>
+        <div class="panel-footer">
+            面板的注脚
+        </div>
+    </div>
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+            弹出层！
+        </div>
+        <div class="panel-body">
+            面板的具体内容
+        </div>
+        <div class="panel-footer">
+            面板的注脚
+        </div>
+    </div>
+</body>
+</html>

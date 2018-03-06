@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="http://localhost/bootstrap/css/bootstrap.min.css"/>
+    <script src="http://localhost/bootstrap/js/jquery-3.3.1.min.js"></script>
+    <script src="http://localhost/bootstrap/js/bootstrap.min.js"></script>
 <%@ page import="bean.test.DbUtil.DbUtil" %>
 <%@ page import="bean.test.Emp" %>
 <%@ page import="java.util.Iterator" %>
@@ -9,8 +19,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" %>
-<html>
-<head>
+
     <title>公告显示</title>
 </head>
 <body>
@@ -36,17 +45,17 @@
     }
     if (flag) {
         %>
-<h3 align="center">公告顯示頁面</h3>
-<h5 align="right">歡迎回來，<a href="userarea.jsp"><%=username%></a> ! 頁面訪問量:<%=application.getAttribute("count")%></h5>
-<h2 align="left">公告列表:</h2>
+<h3 class="text-center">公告顯示頁面</h3>
+<h5 class="text-right">歡迎回來，<a class="active" href="userarea.jsp"><%=username%></a> ! 頁面訪問量:<%=application.getAttribute("count")%></h5>
+<h4 class="h4 text-left default-color0">公告列表:</h4>
 <hr/>
-<table align="center" border="1px" width="500px">
+<table align="center" border="1px" width="500px" class="table table-bordered table-striped table-hover table-condensed">
     <tr>
-        <td>編號</td>
-        <td>名稱</td>
-        <td>内容</td>
-        <td>刪除</td>
-        <td>修改</td>
+        <th>編號</th>
+        <th>名稱</th>
+        <th>内容</th>
+        <th>刪除</th>
+        <th>修改</th>
     </tr>
     <%
         Iterator<Emp.Info> iterator = Emp.getMap().values().iterator();
@@ -76,8 +85,8 @@
 <%
     }else{
         %>
-<h3 align="center">公告顯示頁面</h3>
-<h5 align="center">用戶名或密碼錯誤，請<a href="login.jsp">重新登錄</a></h5>
+<h3 class="h3 text-center">公告顯示頁面</h3>
+<h5 align="h5 text-center">用戶名或密碼錯誤，請<a href="login.jsp">重新登錄</a></h5>
 <%
     }
 %>
