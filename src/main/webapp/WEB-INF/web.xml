@@ -33,14 +33,6 @@
         <servlet-class>chapter2.login.InitServlet</servlet-class>
         <load-on-startup>2</load-on-startup> <!-- 服务器启动的时候就创建这个Servlet实例 -->
     </servlet>
-    <servlet>
-        <servlet-name>RegistServlet</servlet-name>
-        <servlet-class>chapter2.login.RegistServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>RegistServlet</servlet-name>
-        <url-pattern>/chapter2/login/RegistServlet</url-pattern>
-    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>InitServlet</servlet-name>
         <url-pattern>/chapter2/login/loginInit</url-pattern>
