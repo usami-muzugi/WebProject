@@ -19,12 +19,7 @@ public class Servlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String string_1 = request.getParameter("var1");
         String string_2 = request.getParameter("var2");
-        Object var;
-        if (string_1 == null && string_2 == null) {
-            var = "运算错误";
-        }else{
-            var = Integer.valueOf(string_1) + Integer.valueOf(string_2);
-        }
+        int var = Integer.valueOf(string_1) + Integer.valueOf(string_2);
         request.setAttribute("sum", var);
         request.getRequestDispatcher("test/sum.jsp").forward(request, response);
     }

@@ -29,7 +29,91 @@
               </div>
           </fieldset>
       </form>
-  </div>
 
+      <hr/>
+      <table class="table table-hover table-bordered table-striped">
+          <tr>
+              <th>th是用来定义一个表头的</th>
+              <th>再定义一个</th>
+              <th>再定义一个</th>
+              <th>再定义一个</th>
+          </tr>
+          <tr>
+              <td>td是用来定义一个表格单元的</td>
+              <td>再定义一个哟</td>
+              <td>再定义一个哟</td>
+              <td>再定义一个哟</td>
+          </tr>          <tr>
+          <td>td是用来定义一个表格单元的</td>
+          <td>再定义一个哟</td>
+          <td>再定义一个哟</td>
+          <td>再定义一个哟</td>
+      </tr>
+          <tr>
+              <td>td是用来定义一个表格单元的</td>
+              <td>再定义一个哟</td>
+              <td>再定义一个哟</td>
+              <td>再定义一个哟</td>
+          </tr>          <tr>
+          <td>td是用来定义一个表格单元的</td>
+          <td>再定义一个哟</td>
+          <td>再定义一个哟</td>
+          <td>再定义一个哟</td>
+      </tr>
+          <tr class="active">
+              <td>td是用来定义一个表格单元的</td>
+              <td>再定义一个哟</td>
+              <td>再定义一个哟</td>
+              <td>再定义一个哟</td>
+          </tr>
+          <tr class="info">
+          <td>td是用来定义一个表格单元的</td>
+          <td>info</td>
+          <td>再定义一个哟</td>
+          <td>再定义一个哟</td>
+      </tr>
+          <tr class="success">
+              <td>td是用来定义一个表格单元的</td>
+              <td>success</td>
+              <td>再定义一个哟</td>
+              <td>再定义一个哟</td>
+          </tr>
+          <tr class="warning">
+          <td>td是用来定义一个表格单元的</td>
+          <td>warning</td>
+          <td>再定义一个哟</td>
+          <td>再定义一个哟</td>
+      </tr>
+          <tr class="danger">
+              <td>td是用来定义一个表格单元的</td>
+              <td>danger</td>
+              <td>再定义一个哟</td>
+              <td>再定义一个哟</td>
+          </tr>
+      </table>
+
+
+
+      <br>
+      <hr/>
+      <form class="form-inline">
+          <div class="form-group">
+              <label>这是一个输入框:</label>
+              <input type="text" placeholder="这是一个输入框" class="form-control"/>
+          </div>
+          <div class="form-group">
+              <label>这是一个输入框:</label>
+              <input type="text" placeholder="这是一个输入框" class="form-control"/>
+          </div>
+          <div class="form-group">
+              <label>这是一个输入框:</label>
+              <select class="form-control" name="" id="">
+                  <option>ourinsma</option>
+                  <option>wizard</option>
+                  <option>usamimizugi</option>
+              </select>
+          </div>
+      </form>
+  </div>
   </body>
 </html>
