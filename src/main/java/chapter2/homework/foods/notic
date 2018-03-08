@@ -1,0 +1,7 @@
+原本是想弄一个FoodsList类来放List<User>,因为当前还不知道怎么在JavaBean里面调用Servlet中存储的数据....
+
+    public static List<Foods> getAllFoods(List<Foods> list) {
+        return list;
+    }
+
+    就是这个

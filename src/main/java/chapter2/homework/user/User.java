@@ -1,0 +1,59 @@
+package chapter2.homework.user;
+
+public class User {
+    private static int userId;
+    private static String userEmail;
+    private static String userName;
+    private static String userPassword;
+    private static String userQuestion;
+    private static String userAnser;
+
+    public static int getUserId() {
+        return userId;
+    }
+
+    public static void setUserId(int userId) {
+        User.userId = userId;
+    }
+
+    public static String getUserEmail() {
+        return userEmail;
+    }
+
+    public static void setUserEmail(String userEmail) {
+        User.userEmail = userEmail;
+    }
+
+    public static String getUserName() {
+        return userName;
+    }
+
+    public static void setUserName(String userName) {
+        User.userName = userName;
+    }
+
+    public static String getUserPassword() {
+        return userPassword;
+    }
+
+    public static void setUserPassword(String userPassword) {
+        User.userPassword = userPassword;
+    }
+
+    public static String getUserQuestion() {
+        return userQuestion;
+    }
+
+    public static void setUserQuestion(String userQuestion) {
+        User.userQuestion = userQuestion;
+    }
+
+    public static String getUserAnser() {
+        return userAnser;
+    }
+
+    public static void setUserAnser(String userAnser) {
+        User.userAnser = userAnser;
+    }
+
+}
