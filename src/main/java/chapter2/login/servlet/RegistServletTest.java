@@ -12,6 +12,7 @@ import java.util.Map;
 
 import javax.servlet.ServletException;
 
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -26,6 +27,7 @@ import org.apache.commons.fileupload.servlet.ServletFileUpload;
 /**
  * 用户注册的Servlet
  */
+@WebServlet(name="RegistServletTest",displayName = "RegistServletTest",urlPatterns = "chapter2/login/RegistServlet")
 public class RegistServletTest extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// 数据的接收

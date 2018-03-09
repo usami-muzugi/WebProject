@@ -6,13 +6,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 
 
 /**
  * 用户注册的初始化的Servlet
  */
-
+@WebServlet(loadOnStartup = 2)
 public class InitServlet extends HttpServlet {
 
 	@Override
