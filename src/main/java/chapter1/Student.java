@@ -2,7 +2,7 @@ package chapter1;
 
 /**
  * Created by IntelliJ IDEA.
- * chapter1.User: wzard
+ * chapter1.Food: wzard
  * Date: 2018-01-31
  * Time: 16:03
  * ProjectName: WebProject
@@ -17,7 +17,7 @@ public class Student {
     }
 
     public void printName() {
-        System.out.println("chapter1.User name is :"+this.name);
+        System.out.println("chapter1.Food name is :"+this.name);
     }
 
     //Ctrl + D 快速复制代码
@@ -25,7 +25,7 @@ public class Student {
         //Ctrl + W 选择代码
         //Ctrl + Shift + W 释放代码
         //Ctrl + Left/Right 移动光标到单词最左或最右
-        System.out.println("chapter1.User name is :"+this.age);
+        System.out.println("chapter1.Food name is :"+this.age);
     }
 
 

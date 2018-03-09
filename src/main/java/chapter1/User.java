@@ -10,7 +10,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "chapter1.User{" +
+        return "chapter1.Food{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
                 '}';
