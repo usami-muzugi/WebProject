@@ -54,7 +54,7 @@
     </table>
 </div>
 <hr/>
-<form action="">
+<form action="/chapter2/homework/upload" enctype="multipart/form-data">
     <div class="form-group">
     <table class="table table-hover table-bordered table-striped">
         <tr class="table">
@@ -68,8 +68,8 @@
         <tr>
             <td><input class="form-control" name="id"></td>
             <td><input class="form-control" name="name"></td>
-                <td><input class="form-control" name="taste"></td>
-            <td><input class="form-control" name="img"></td>
+            <td><input class="form-control" name="taste"></td>
+            <td><input class="form-control" type="file" name="img"></td>
             <td><input class="form-control" name="price"></td>
             <td><input class="form-control" name="info"></td>
         </tr>
