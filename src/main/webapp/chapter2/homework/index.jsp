@@ -8,7 +8,6 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -23,12 +22,20 @@
 <header class="page-header">
     <h2 class="h2 text-center">欢迎使用菜品管理系统</h2>
 </header>
-<div class="col-lg-2 col-md-4">
-    <form class="form-group" action="/chapter2/index.jsp">
+<div class="col-lg-2">
+    <form class="form-group" action="/chapter2/homework/LoginServlet">
         <label>用户名:</label><input class="form-control" type="text" name="username" value="<%=User.getUserName()%>">
-        <label>密码:</label><input class="form-control" type="password" name="password" value="<%=User.getUserPassword()%>">
-        <button class="btn btn-info btn-block">登录</button>
+        <label>密码:</label><input class="form-control" type="password" name="password" value="<%=User.getUserPassword()%>"><button class="btn btn-info btn-block">登录</button>
     </form>
+    <h3 class="h3 text-left text-warning">
+        <%
+            String string = (String) request.getAttribute("Msg");
+
+            if (string!=null) {
+                out.print(string);
+            }
+        %>
+    </h3>
 </div>
 </body>
 </html>

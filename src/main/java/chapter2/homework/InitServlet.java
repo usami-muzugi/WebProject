@@ -10,12 +10,11 @@ import javax.servlet.http.HttpServlet;
 import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet(name = "InitServlet",displayName = "InitServlet",urlPatterns = "/InitServlet",loadOnStartup = 2)
+@WebServlet(name = "InitServlet",displayName = "InitServlet",urlPatterns = "/chapter2/homework/InitServlet",loadOnStartup = 1)
 public class InitServlet extends HttpServlet {
     @Override
     public void init() throws ServletException {
         //用户初始化
-        User.setUserId(1);
         User.setUserName("usamimizugi");
         User.setUserEmail("3436260@qq.com");
         User.setUserPassword("ourinsama");

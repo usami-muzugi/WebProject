@@ -1,20 +1,11 @@
 package chapter2.homework.user;
 
 public class User {
-    private static int userId;
     private static String userEmail;
     private static String userName;
     private static String userPassword;
     private static String userQuestion;
     private static String userAnser;
-
-    public static int getUserId() {
-        return userId;
-    }
-
-    public static void setUserId(int userId) {
-        User.userId = userId;
-    }
 
     public static String getUserEmail() {
         return userEmail;
@@ -56,4 +47,13 @@ public class User {
         User.userAnser = userAnser;
     }
 
+    public User(String userName,String userPassword) {
+        User.userName = userName;
+        User.userPassword = userPassword;
+    }
+
+    @Override
+    public String toString() {
+        return userName;
+    }
 }
