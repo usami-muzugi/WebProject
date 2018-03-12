@@ -27,7 +27,7 @@ import org.apache.commons.fileupload.servlet.ServletFileUpload;
 /**
  * 用户注册的Servlet
  */
-@WebServlet(name="RegistServletTest",displayName = "RegistServletTest",urlPatterns = "chapter2/login/RegistServlet")
+@WebServlet(name="RegistServletTest",displayName = "RegistServletTest",urlPatterns = "/chapter2/login/RegistServlet")
 public class RegistServletTest extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// 数据的接收
