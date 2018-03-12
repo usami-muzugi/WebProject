@@ -89,7 +89,7 @@ public class RegistServletTest extends HttpServlet {
 						is.close();
 						os.close();
 					}
-				
+
 				}
 			}
 			System.out.println(map);
@@ -112,7 +112,7 @@ public class RegistServletTest extends HttpServlet {
 			user.setHobby(map.get("hobby"));
 			user.setPath(url);
 			// 将注册用户的信息存入到List集合中:
-			
+
 			userList.add(user);
 			for (User u : userList) {
 				System.out.println(u);
@@ -125,7 +125,7 @@ public class RegistServletTest extends HttpServlet {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
