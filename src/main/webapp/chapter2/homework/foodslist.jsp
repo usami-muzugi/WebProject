@@ -22,7 +22,7 @@
 <body>
 <header class="page-header">
     <h2 class="h2 text-center">菜品管理系统</h2>
-    <h3 class="h3 text-right col-lg-11">欢迎回来，<%=session.getAttribute("username")%> <a href="userinfo.jsp" class="btn btn-success">用户信息</a></h3>
+    <h3 class="h3 text-right col-lg-11">欢迎回来，<%=session.getAttribute("username")%><img class="img img-thumbnail img-circle img-" src="upload/<%=request.getSession().getAttribute("icon")%>"> <a href="userinfo.jsp" class="btn btn-success">用户信息</a></h3>
 </header>
 <table class="table table-hover table-bordered table-striped">
     <tr class="table">
@@ -56,6 +56,7 @@
 </table>
 <footer>
     <h3 class="col-lg-12 text-right"><a href="foodadd.jsp" class="btn btn-success">添加菜品</a></h3>
+    <h3 class="col-lg-12 text-right"><a href="logout.jsp" class="btn btn-success">退出</a></h3>
 </footer>
 </body>
 </html>
