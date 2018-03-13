@@ -7,6 +7,7 @@
 --%>
 <%@ page import="chapter2.homework.foodsUtils.Food" %>
 <%@ page import="java.util.List" %>
+<%@ page import="java.util.Iterator" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,38 +26,42 @@
     <h2 class="h2 text-center">菜品管理系统 - 修改菜品</h2>
     <h3 class="h3 text-right col-lg-11">欢迎回来，<%=session.getAttribute("username")%><img class="img img-thumbnail img-circle img-" src="upload/<%=request.getSession().getAttribute("icon")%>"> <a href="userinfo.jsp" class="btn btn-success">用户信息</a></h3>
 </header>
-<table class="table table-hover table-bordered table-striped">
-    <tr class="table">
+<%
+    int index = Integer.valueOf(request.getParameter("foodId"));
+    List<Food> list = (List<Food>) application.getAttribute("FoodList");
+    Food food = null;
+    Iterator<Food> iterator = list.iterator();
+    while (iterator.hasNext()) {
+        food = iterator.next();
+        if (food.getFoodId() == index) {
+            break;
+        }
+    }
+%>
+<form action="" enctype="multipart/form-data">
+<table class="table">
+    <tr>
         <th>#</th>
         <th>菜品名</th>
         <th>菜品口味</th>
         <th>菜品图片</th>
         <th>菜品价格</th>
         <th>菜品信息</th>
-        <th>修改</th>
-        <th>删除</th>
     </tr>
-    <%
-        List<Food> list = (List<Food>)application.getAttribute("FoodList");
-        for (Food li:list
-                ) {
-    %>
     <tr>
-        <td><%=li.getFoodId()%></td>
-        <td><%=li.getFoodName()%></td>
-        <td><%=li.getFoodTaste()%></td>
-        <td><%=li.getFoodIcon()%></td>
-        <td><%=li.getFoodPrice()%></td>
-        <td><%=li.getFoodInfo()%></td>
-        <td><a class="btn btn-info">修改</a></td>
-        <td><a class="btn btn-warning" href="remove.jsp?foodId=<%=li.getFoodId()%>">删除</a></td>
+        <td><input type="text"name="id" value="<%=food.getFoodId()%>"></td>
+        <td><input type="text"name="name" value="<%=food.getFoodName()%>"></td>
+        <td><input type="text"name="taste" value="<%=food.getFoodTaste()%>"></td>
+        <td><input type="file"name="file" value="<%=food.getFoodIcon()%>"></td>
+        <td><input type="text"name="price" value="<%=food.getFoodPrice()%>"></td>
+        <td><input type="text"name="info" value="<%=food.getFoodInfo()%>"></td>
     </tr>
-    <%
-        }
-    %>
 </table>
+    <input class="btn btn-info" type="submit" value="确定">
+</form>
 <footer>
     <h3 class="col-lg-12 text-right"><a href="foodadd.jsp" class="btn btn-success">添加菜品</a></h3>
+    <h3 class="col-lg-12 text-right"><a href="foodslist.jsp" class="btn btn-success">返回</a></h3>
     <h3 class="col-lg-12 text-right"><a href="logout.jsp" class="btn btn-success">退出</a></h3>
 </footer>
 </body>
