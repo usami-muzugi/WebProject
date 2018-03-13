@@ -1,11 +1,12 @@
-<%@ page import="chapter2.homework.foodsUtils.Food" %>
-<%@ page import="java.util.List" %><%--
+<%--
   Created by IntelliJ IDEA.
   User: Wizard
-  Date: 2018/3/12
-  Time: 20:56
+  Date: 2018/3/13
+  Time: 20:59
   To change this template use File | Settings | File Templates.
 --%>
+<%@ page import="chapter2.homework.foodsUtils.Food" %>
+<%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,29 +18,11 @@
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.css"/>
     <script src="/bootstrap/js/jquery-3.3.1.min.js"></script>
     <script src="/bootstrap/js/bootstrap.js"></script>
-    <title>菜品管理系统</title>
+    <title>菜品管理系统 - 修改菜品</title>
 </head>
 <body>
 <header class="page-header">
-    <h2 class="h2 text-center">菜品管理系统</h2>
-<%--    //为什么这里我必须要刷新一下才会显示头像??????--%>
-    <%--
-    http://blog.csdn.net/qq_32120667/article/details/77141672
-
-原来是这样子：---》
-今天遇到了很大一个BUG 研究了半天终于解决!
-
-当你从客户端上传图片到服务器时候,服务器保存了并且接收到了所有数据,数据库也存了,但是必须刷新文件夹或者重新部署文件才能在客户端显示刚才的图片  以下是解决办法
-
-   注意!!!这句话才是获得webRoot下的upload文件夹 ServletActionContext.getServletContext().getRealPath("upload");
-
-  如果直接写绝对路径来存上传的图片 肯定要刷新下才能看到了://"E:/workspase/MyBatisAndStrutsAndSpring/WebContent/upload/";
-
-解决方案:  就是我上面说的那样 上传图片直接换ServletActionContext.getServletContext().getRealPath("upload");来存到webRoot下的upload文件夹
-
-不要写绝对路径  OK 问题解决!
-
-    --%>
+    <h2 class="h2 text-center">菜品管理系统 - 修改菜品</h2>
     <h3 class="h3 text-right col-lg-11">欢迎回来，<%=session.getAttribute("username")%><img class="img img-thumbnail img-circle img-" src="upload/<%=request.getSession().getAttribute("icon")%>"> <a href="userinfo.jsp" class="btn btn-success">用户信息</a></h3>
 </header>
 <table class="table table-hover table-bordered table-striped">
@@ -65,7 +48,7 @@
         <td><%=li.getFoodIcon()%></td>
         <td><%=li.getFoodPrice()%></td>
         <td><%=li.getFoodInfo()%></td>
-        <td><a class="btn btn-info" href="foodreplace.jsp?foodId=<%=li.getFoodId()%>">修改</a></td>
+        <td><a class="btn btn-info">修改</a></td>
         <td><a class="btn btn-warning" href="remove.jsp?foodId=<%=li.getFoodId()%>">删除</a></td>
     </tr>
     <%

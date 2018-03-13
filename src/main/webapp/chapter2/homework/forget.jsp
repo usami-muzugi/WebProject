@@ -8,9 +8,19 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>忘记密码</title>
 </head>
 <body>
-
+<h3 align="left">忘记密码</h3>
+<h3 align="left"><%
+    String string;
+    if ((string = (String) request.getAttribute("Msg")) != null) {
+        out.print(string);
+    }
+%></h3>
+<form action="/chapter2/homework/UserForgetPasswordServlet">
+    用户名:<input name="username">
+    <input type="submit" value="确认">
+</form>
 </body>
 </html>

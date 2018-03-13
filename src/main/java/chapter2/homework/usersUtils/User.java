@@ -99,4 +99,17 @@ public class User {
     public void setUserIcon(String userIcon) {
         this.userIcon = userIcon;
     }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "userId=" + userId +
+                ", userName='" + userName + '\'' +
+                ", userEmail='" + userEmail + '\'' +
+                ", userPassword='" + userPassword + '\'' +
+                ", userQuestion='" + userQuestion + '\'' +
+                ", userAnswer='" + userAnswer + '\'' +
+                ", userIcon='" + userIcon + '\'' +
+                '}';
+    }
 }

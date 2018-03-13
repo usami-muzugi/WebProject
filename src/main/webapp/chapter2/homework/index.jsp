@@ -45,6 +45,7 @@
 <h3 class="h3 text-center">菜品管理系统界面-登录页面</h3>
 <div class="col-lg-2">
     <h4 class="h4 color"><font color="#dc143c"><%=msg%></font></h4>
+    <%--//method="post" Get方法是明文.... 用POST....以后用，记住了--%>
     <form class="form-group" action="/chapter2/homework/LoginServlet">
         <label>用户名:</label><input class="form-control" type="text" value="<%=username%>" name="user" placeholder="可输入用户名、Email、ID">
         <label>密码:</label><input class="form-control" type="password" name="userpassword">
